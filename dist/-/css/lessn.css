@@ -157,4 +157,5 @@ h2.active:after {
 	color: #34a;
 	background-color: transparent;
 	text-decoration: underline;
+	cursor: pointer;
 }
