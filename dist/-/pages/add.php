@@ -42,6 +42,7 @@
 
 <p>
 	<a href="?stats">URL Stats</a>
+	<a href="?export">Export All URLs</a>
 </p>
 
 <?php if(isset($bc_log) && strlen($bc_log)) : ?>

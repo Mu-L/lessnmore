@@ -675,6 +675,14 @@ else if(isset($_GET['stats']))  // Display stats
 	$number_redirected = stats_total_redirects($db);
 	include('pages/stats.php');
 }
+else if(isset($_GET['export']))  // export redirections
+{
+	REQUIRE 'export.php';
+	// Attempt to avoid timeouts
+	set_time_limit(60 * 20);
+	$all_urls = all_urls($db);
+	include('pages/export.php');
+}
 elseif(isset($_GET['mark_gone']) && isset($_GET['slug']) && strlen(trim($_GET['slug'])))
 { // Mark a redirection as GONE
 	// TODO
